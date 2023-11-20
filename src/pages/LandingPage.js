@@ -22,21 +22,45 @@ import groupTenOne from './../assets/groupTenOne.png'
 import groupTenTwo from './../assets/groupTenTwo.png'
 import groupTenThree from './../assets/groupTenThree.png'
 import groupEleven from './../assets/groupEleven.png'
+import frameOne from './../assets/frameOne.png'
+import frameTwo from './../assets/frameTwo.png'
+import styled from 'styled-components'
 
-
+const Span = styled.span`
+color: yellow;
+`
+const MainContainer = styled.div`
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+`
+const WhiteDiv = styled.div`
+    background-color: white;
+    color:black;
+    padding:50px 0px ;
+`
+const WhiteDivBox = styled.div`
+    display: flex;
+    justify-content: center;
+    gap:10px;
+`
+const TextDiv = styled.div`
+padding:40px 0px;
+`
 function LandingPage() {
     return (
-        <div className='landing-page-container'>
-            <div >
-                <p>It's time to trade,</p>
-                <p>the <span>future.</span></p>
-                <p>Trade BTC, ETH Futures with 125x leverage and earn rewards.</p>
-            </div>
+        <MainContainer >
+            <TextDiv >
+                <p style={{ fontSize: "96px", fontWeight: "700", lineHeight: "96px" }}>It's time to trade,
+                    <br />the <Span >future.</Span></p>
+                <p style={{ fontSize: "24px", fontWeight: "400"}}>Trade BTC, ETH Futures with 125x leverage and earn rewards.</p>
+            </TextDiv>
             <div>
                 <img src={IphoneGroupImg} alt='' />
             </div>
-            <div>
-                pending design structure
+            <div style={{ margin: "60px 0px" }}>
+                <img src={frameOne} alt='' />
             </div>
             <div>
                 <div>
@@ -50,52 +74,52 @@ function LandingPage() {
                 </div>
 
             </div>
-            <div>
-                <p>Trade MOre. Pay Less.</p>
-                <p>Our Low Fees Supercharge Your Profits</p>
-            </div>
+            <TextDiv>
+                <p style={{ fontSize: "72px", fontWeight: "700" }}>Trade More. <Span >Pay Less.</Span></p>
+                <p style={{ fontSize: "24px", fontWeight: "400" }}>Our Low Fees Supercharge Your Profits</p>
+            </TextDiv>
 
 
             <div>
                 <img src={groupThree} alt='' />
             </div>
-            <div>
-                <p>Explore the Markets</p>
-                <p>like it is your Playground.</p>
-                <p>Search for your favorite coins and stay ahead of the market</p>
-            </div>
+            <TextDiv>
+                <p style={{ fontSize: "72px", fontWeight: "700" }}>Explore the Markets</p>
+                <p style={{ fontSize: "72px", fontWeight: "700", lineHeight: "72px" }}>like it is your <span style={{ color: "yellow" }}>Playground.</span></p>
+                <p style={{ fontSize: "24px", fontWeight: "400", lineHeight: "72px" }}>Search for your favorite coins and stay ahead of the market</p>
+            </TextDiv>
             <div>
                 <img src={groupFour} alt='' />
             </div>
-            <div>
-                <button className='group-four-btn'>EXPLORE MARKETS</button>
+            <div style={{ marginBottom: "40px" }}>
+                <button style={{ width: "268px", height: "48px", borderRadius: "8px", padding: "24px 48px 36px 48px", fontWeight: "700" }} className='group-four-btn'>EXPLORE MARKETS</button>
             </div>
+            <TextDiv>
+                <p style={{ fontSize: "72px", fontWeight: "700" }}><Span >Unlock</Span> New Frontiers.</p>
+                <p style={{ fontSize: "24px", fontWeight: "400" }}>Are you a stock trader looking for new opportunities to make</p>
+                <p style={{ fontSize: "24px", fontWeight: "400" }}> money? We got you covered!</p>
+            </TextDiv>
             <div>
-                <p>Unlock New Frontiers.</p>
-                <p>Are you a stock trader looking for new opportunities to make</p>
-                <p> money? We got you covered!</p>
-            </div>
-            <div>
-                pending
+                <img src={frameTwo} alt='' />
             </div>
             <div>
                 <img src={groupFive} alt='' />
             </div>
-            <div className='white-div-1'>
-                <div>
-                    <p>Start Small. Earn Big.</p>
-                    <p>Deposity a minimum of 1000 and get a Deposit bonus + </p>
-                    <p>dedicagted relationship manager</p>
-                </div>
-                <div className='white-div-box2'>
+            <WhiteDiv className='white-div-1'>
+                <TextDiv>
+                    <p style={{ fontSize: "72px", fontWeight: "700", lineHeight: "72px" }}>Start Small. Earn Big.</p>
+                    <p style={{ fontSize: "24px", fontWeight: "400" }}>Deposity a minimum of 1000 and get a Deposit bonus + </p>
+                    <p style={{ fontSize: "24px", fontWeight: "400" }}>dedicagted relationship manager</p>
+                </TextDiv>
+                <WhiteDivBox >
                     <div><img src={whiteOneOne} alt='' /></div>
                     <div><img src={whiteOneTwo} alt='' /></div>
-                </div>
-            </div>
-            <div>
-                <p>Derivates made simple</p>
-                <p>in 3 Easy Steps</p>
-            </div>
+                </WhiteDivBox>
+            </WhiteDiv>
+            <TextDiv>
+                <p style={{ fontSize: "72px", fontWeight: "700", lineHeight: "72px" }}>Derivates made simple</p>
+                <p style={{ fontSize: "72px", fontWeight: "700", lineHeight: "72px" }}>in <Span > 3 Easy Steps</Span></p>
+            </TextDiv>
             <div>
                 <div>
                     <img src={groupSixOne} alt='' />
@@ -107,17 +131,17 @@ function LandingPage() {
                     <img src={groupSixThree} alt='' />
                 </div>
             </div>
-            <div>Backed by the Best.</div>
+
             <div>
                 <img src={groupSevern} alt='' />
             </div>
             <div className='white-div-2'>
-                <div>
-                    <p>Don’t take our word for it.</p>
-                    <p>Hear it from our expert community of traders who have made </p>
-                    <p>insane amounts in a short amount of time</p>
-                </div>
-                <div className='white-div-2-box-2'>
+                <TextDiv>
+                    <p style={{ fontSize: "72px", fontWeight: "700" }}> Don’t take our word for it.</p>
+                    <p style={{ fontSize: "24px", fontWeight: "400" }}>Hear it from our expert community of traders who have made </p>
+                    <p style={{ fontSize: "24px", fontWeight: "400" }}>insane amounts in a short amount of time</p>
+                </TextDiv>
+                <WhiteDivBox>
                     <div>
                         <img src={whiteTwoOne} alt='' />
                     </div>
@@ -127,7 +151,7 @@ function LandingPage() {
                     <div>
                         <img src={whiteTwoThree} alt='' />
                     </div>
-                </div>
+                </WhiteDivBox>
             </div>
             <div>
                 <img src={groupEight} alt='' />
@@ -141,8 +165,8 @@ function LandingPage() {
             <div>
                 <img src={groupEleven} alt='' />
             </div>
-            
-        </div>
+
+        </MainContainer>
     )
 }
 

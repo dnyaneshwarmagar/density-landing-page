@@ -1,7 +1,6 @@
 import * as React from "react"
 import Navbar from "../components/Navbar"
 import styled from "styled-components"
-// import GlobalStyles from "../GlobalStyles"
 import './index.css'
 import LandingPage from "./LandingPage"
 import Footer from "../components/Footer"
